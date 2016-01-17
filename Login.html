@@ -1,0 +1,71 @@
+<html>
+<head>
+<Tittle><h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLocal storage</h1></tittle>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="jshtml5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script>
+             function load() 
+             { 
+               
+               
+               var fname=localStorage.getItem("fname");
+               var last=localStorage.getItem("last");
+               var email=localStorage.getItem("email");
+               var pwd=localStorage.getItem("pwd");
+               var dob=localStorage.getItem("dob");  
+               var gender=localStorage.getItem("gender");
+               document.getElementById("fname").value=fname;
+               document.getElementById("last").value=last;
+               document.getElementById("email").value=email;
+               document.getElementById("pwd").value=pwd;
+               document.getElementById("dob").value=dob;
+               document.getElementById("gender").value=gender;
+              
+              }
+       
+            </script>
+  </head>
+                <body onload="load()">
+             
+
+	        <div class="container" id="container">
+		<div class="well">
+                <h1 style="font-side:50;color:black;text-align:left">Your Details</h1>
+                
+	        <label>First Name</label><br>
+                <input type="text" name="fname" id="fname" class="store" ></input><br>
+                <label>Last Name</label><br>
+                <input type="text" name="last"  id="last" class="store" ></input><br>
+                <label>Email</label><br>
+                <input type="text" name="email" id="email" class="store" ></input><br>
+                <label>Password</label><br>
+                <input type="text"name="pwd" id="pwd" class="store" ></input><br>
+                <label>Birthday</label><br>
+                <input type="text" name="dob" class="store" id="dob"></input><br>
+                <label>Gender</label><br>
+                <input type="text" name="gender" id="gender" class="store"></input><br><br>
+                 <input type = "button"  value= "Back" class="store"onclick="location.href='home.html'">
+                </div>
+                </div>   
+        
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          <script src="js/jquery.min.js"></script>
+          <!-- Include all compiled plugins (below), or include individual files as needed -->
+          <script src="js/bootstrap.min.js"></script>
+          
+        
+</body>
+</html>

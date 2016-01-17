@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    
+  
+          <style type="text/css">
+          .header {
+                      background-color:darkblue;
+                      color:black;
+                      text-align:center;
+                      padding:5px;
+                  }
+          .container1{
+                     margin-top: 30px;
+                     margin-right: 2px;
+                     margin-left: 2px;
+            
+                  }
+        </style>
+        
+        </head>
+
+        <body>
+          <div class="header">
+          <h1 style="font-side:50;color:white;text-align:left">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFacebook</h1>
+          <label style="color:white">Email Id</label>
+          <input type="text" name="email" class="email" placeholder="Email Id" required="">
+          <label style="color:white">&nbsp&nbsp&nbsp&nbsp&nbspPassword</label>
+          <input type="password"name="pwd" placeholder="password" required="">
+          <button type="button" name="submit"class="button">Login</button><br><br>
+          </div>
+        
+	        <div class="container" id="container" action="post">
+		<div class="well">
+                <h1 style="font-side:50;color:black;text-align:left">Create an Account</h1>
+                
+	        <label>First Name</label><br>
+                <input type="text" name="fname" id="fname" class="store" placeholder="Firstname" require=""><br>
+                <label>Last Name</label><br>
+                <input type="text" name="last"  id="last" class="store" placeholder="Lastname" required=""><br>
+                <label>Email</label><br>
+                <input type="text" name="email" id="email" class="store" placeholder="Email Id" required=""><br>
+                <label>Password</label><br>
+                <input type="password"name="pwd" id="pwd" class="store" placeholder="password" required="">
+
+                <div class="container1">
+		<div class="well">
+
+                  <fieldset>
+                  <label>Birthday</label><br>
+                        <label class="Month"> 
+                        <select class="select-style" id="BM"name="BM">
+                          <option value="">Month</option>
+                          <option  value="01">January</option>
+                          <option value="02">February</option>
+                          <option value="03" >March</option>
+                          <option value="04">April</option>
+                          <option value="05">May</option>
+                          <option value="06">June</option>
+                          <option value="07">July</option>
+                          <option value="08">August</option>
+                          <option value="09">September</option>
+                          <option value="10">October</option>
+                          <option value="11">November</option>
+                          <option value="12" >December</option>
+                          </select>
+                        </label>
+                        
+                       <label>Day<input class="store" id="BDay" name="BDay"  placeholder="Day" required=""></label>
+                       <label>Year<input class="store" id="BYear" name="BYear" placeholder="Year" required=""></label>
+                  </fieldset>
+
+                        <label>Gender</label><br>
+                        <select class="select-style gender" name="gender" id="gender">
+                          <option value="select">I Am..</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="others">Other</option>
+                        </select><br><br>
+                </div>
+                </div>
+                <button type="button" id="submit "class="store" onclick="save()">Sign me up</button>
+                <button type="button" id="submit "class="store" onclick="clear()">Clear</button>
+                <input type = "button"  value= "Your detail" class="store"onclick="location.href='Login.html'">
+           </div>
+	   </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+         function save() 
+          {   
+              var dob;
+              alert("Hi");
+              var fname=document.getElementById("fname").value;
+              var last=document.getElementById("last").value;
+              var email=document.getElementById("email").value;
+              var pwd=document.getElementById("pwd").value;
+              var BM=document.getElementById("BM").value;
+              var BDay=document.getElementById("BDay").value;
+              var BYear=document.getElementById("BYear").value;
+              var gender=document.getElementById("gender").value;
+              dob=BDay+":"+BM+":"+BYear;
+              localStorage.setItem("fname",fname);
+              localStorage.setItem("last",last);
+              localStorage.setItem("email",email);
+              localStorage.setItem("pwd",pwd);
+              localStorage.setItem("dob",dob);
+              localStorage.setItem("gender",gender);
+          }
+
+         function clear() {
+         localStorage.removeItem("fname");
+	 localStorage.removeItem("last");
+	 localStorage.removeItem("email");
+	 localStorage.removeItem("pwd");
+	 localStorage.removeItem("BM");
+	 localStorage.removeItem("BDay");
+	 localStorage.removeItem("BYear");
+	 localStorage.removeItem("gender");
+
+}   
+        </script>
+</body>
+</html>
